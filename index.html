@@ -263,14 +263,16 @@
                     <h3 class="font-bold text-[#1F1F1F] text-xl lg:text-2xl mb-4">Чем выгодно работать с нами? Для бригадиров и специалистов</h3>
                     
                     <div class="space-y-3 text-[#666666]">
-                        <p>Вы — товарищи вдумчивые и более оседлые. Отвечаю бригадирам, сложенным коллективам и одиночкам-специалистам:</p>
-                        
-                        <p><strong class="text-[#1B579C]">1.</strong> Добавлю в базу контактов. Иметь план Б — это хорошо. Условия, на которых вы работаете с бригадой, сохранятся.</p>
-                        
-                        <div class="bg-gradient-to-r from-[#0D4B9F] to-[#00A86B] rounded-xl p-4 text-white">
-                            <p class="font-bold">Таких расценок у нас навряд ли вы имеете</p>
-                            <p class="text-white/90 text-sm mt-1">С такими ценами вокруг надо зарабатывать максимально выше!</p>
-                        </div>
+                        <p>Вы люди серьезные, вдумчивые и цените стабильность. Поэтому обращаюсь прямо к бригадирам, сработанным коллективам и классным специалистам-одиночкам.</p>
+
+ <p>Предлагаю добавить вас в мою базу контактов. В наше время всегда полезно иметь надежный план Б и запасной вариант работы.</p>
+
+ <p>Условия, на которых вы привыкли работать со своей бригадой, сохранятся полностью. Я не ломаю то, что работает.</p>
+
+ <div class="bg-gradient-to-r from-[#0D4B9F] to-[#00A86B] rounded-xl p-4 text-white">
+  <p class="font-bold">Но главное в другом. Вряд ли где-то ещё вам сейчас предложат такие высокие расценки за работу, как у нас.</p>
+  <p class="text-white/90 text-sm mt-1">А с нынешними ценами в магазинах надо использовать любую возможность зарабатывать по максимуму!</p>
+ </div></div>
                     </div>
                     
                     <a href="https://vk.com/sovremennayaartel" target="_blank" class="inline-flex items-center gap-2 bg-[#1B579C] hover:bg-[#0D4B9F] text-white font-semibold px-5 py-3 rounded-xl mt-6 transition">
@@ -633,6 +635,12 @@
         // Форма сравнения зарплат
         document.getElementById('salaryForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+                
+    const phone = this.elements['phone'].value.replace(/\D/g, '');
+    if (phone.length < 11) {
+      alert('Пожалуйста, заполните телефон полностью (11 цифр)');
+      return;
+    }
             
             const formData = new FormData(this);
             
